@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cue - Act at the right moment</title>
+    <meta name="description" content="Cue is a cross-device reminders app with powerful recurring rules and custom snoozing.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            bg: '#18151f',      /* Deep dark background */
+                            card: '#27222e',    /* Card background */
+                            accent: '#ffad85',  /* The peach color from your screenshot */
+                            accentHover: '#ff9a6b',
+                            text: '#f3f4f6',
+                            muted: '#9ca3af'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #18151f; color: #f3f4f6; }
+        .glass-effect {
+            background: rgba(39, 34, 46, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-accent selection:text-brand-bg">
+
+    <nav class="fixed w-full z-50 top-0 left-0 border-b border-white/5 bg-brand-bg/90 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="text-xl font-medium tracking-tight">Cue</div>
+            <div class="hidden md:flex space-x-8 text-sm text-brand-muted">
+                <a href="#features" class="hover:text-white transition-colors">Features</a>
+                <a href="#how-it-works" class="hover:text-white transition-colors">How it Works</a>
+                <a href="#privacy" class="hover:text-white transition-colors">Privacy</a>
+            </div>
+            <a href="#download" class="text-sm font-medium text-brand-accent hover:text-white transition-colors">Get the App</a>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            
+            <div class="max-w-xl">
+                <h1 class="text-5xl lg:text-6xl font-medium leading-tight mb-6">
+                    Act at the <br>
+                    <span class="text-brand-accent">right moment.</span>
+                </h1>
+                <p class="text-lg text-brand-muted mb-8 leading-relaxed">
+                    A calm, cross-device reminders app designed for reliability. 
+                    Master your schedule with powerful recurring rules and fluid, custom snoozing.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4" id="download">
+                    <button class="bg-white text-brand-bg px-6 py-3 rounded-lg font-medium flex items-center justify-center gap-2 hover:bg-gray-100 transition-all">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.3-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.21-1.96 1.07-3.11-1.04.05-2.29.69-2.92 1.59-.56.81-.93 2.02-.75 3.07 1.12.08 2.3-.67 2.6-1.55z"/></svg>
+                        <span>App Store</span>
+                    </button>
+                    <button class="border border-white/20 text-white px-6 py-3 rounded-lg font-medium flex items-center justify-center gap-2 hover:bg-white/5 transition-all">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M3.52 16.29c.33.68.74 1.34 1.22 1.94l-1.07 1.84c-.33.58-.14 1.32.44 1.66.59.34 1.33.14 1.67-.44l1.09-1.89c3.08 1.41 6.64 1.41 9.72 0l1.09 1.89c.33.58 1.08.78 1.67.44.58-.33.77-1.08.44-1.66l-1.07-1.84c.48-.6.89-1.26 1.22-1.94.94-1.88 1.28-4.04.89-6.13h-4.6l1.32-2.29c.34-.58.14-1.32-.44-1.66-.58-.33-1.32-.14-1.66.44L12.41 8.8c-.89-.12-1.8-.12-2.7 0L8.68 6.66c-.34-.58-1.08-.77-1.66-.44-.58.33-.78 1.08-.44 1.66l1.32 2.29H3.32c-.39 2.09-.05 4.25.89 6.13zM8 12.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zm8 0c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5z"/></svg>
+                        <span>Google Play</span>
+                    </button>
+                </div>
+                <div class="mt-6 flex items-center gap-2 text-xs text-brand-muted">
+                    <span class="flex h-2 w-2 rounded-full bg-green-500"></span>
+                    Available on iOS & Android
+                </div>
+            </div>
+
+            <div class="relative lg:h-[600px] flex items-center justify-center">
+                <div class="absolute w-64 h-64 bg-brand-accent/20 rounded-full blur-3xl -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+
+                <div class="w-[320px] bg-brand-bg border border-white/10 rounded-[40px] shadow-2xl overflow-hidden relative">
+                    <div class="h-12 flex justify-between items-center px-6 text-[10px] text-gray-400 font-medium tracking-wide">
+                        <span>9:41</span>
+                        <div class="flex gap-1">
+                            <div class="w-3 h-3 rounded-full border border-gray-500"></div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 pt-2">
+                        <div class="text-center text-[10px] tracking-widest text-brand-accent/80 font-semibold mb-6 uppercase">Today, Oct 24</div>
+
+                        <div class="bg-brand-card rounded-3xl p-6 shadow-lg mb-8 relative overflow-hidden border border-white/5">
+                            <div class="flex justify-between items-start mb-8">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-2 h-2 rounded-full bg-brand-accent"></div>
+                                    <span class="text-xs font-semibold text-brand-accent uppercase tracking-wide">Current Cue</span>
+                                </div>
+                                <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center">
+                                    <svg class="w-3 h-3 text-white/50" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+                                </div>
+                            </div>
+
+                            <h2 class="text-2xl font-semibold text-white mb-2">Take Vitamin D</h2>
+                            <div class="flex items-center gap-2 text-gray-400 text-sm mb-10">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span>in 15 mins</span>
+                                <span class="text-gray-600 ml-1">09:00 AM</span>
+                            </div>
+
+                            <div class="bg-brand-accent rounded-full py-3 px-1 flex items-center justify-center relative cursor-default">
+                                <span class="text-brand-bg font-semibold text-sm">Mark Done</span>
+                                <div class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/10 rounded-full flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-brand-bg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center mt-4 text-[10px] text-gray-500 font-medium tracking-wide uppercase">Swipe to Snooze</div>
+                        </div>
+
+                        <div class="px-2">
+                            <div class="flex justify-between items-end mb-4">
+                                <span class="text-[10px] font-bold tracking-widest text-gray-500 uppercase">Upcoming</span>
+                                <span class="text-[10px] text-brand-accent cursor-pointer">View list</span>
+                            </div>
+                            <div class="glass-effect rounded-2xl p-4 flex justify-between items-center">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-2 h-2 rounded-full bg-brand-accent opacity-50"></div>
+                                    <div class="h-4 w-4 text-gray-400">
+                                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 22c4.97 0 9-4.03 9-9 0-4.97-9-13-9-13S3 8.03 3 13c0 4.97 4.03 9 9 9z"/></svg>
+                                    </div>
+                                </div>
+                                <span class="text-[10px] font-mono text-gray-400">10:00</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 glass-effect rounded-[30px] h-16 w-full flex justify-around items-center px-4">
+                            <div class="text-brand-accent"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></div>
+                            <div class="text-gray-600"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg></div>
+                            <div class="text-gray-600"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg></div>
+                        </div>
+                    </div>
+                    
+                    <div class="absolute bottom-20 right-6">
+                        <div class="w-14 h-14 bg-brand-accent rounded-full flex items-center justify-center shadow-lg shadow-brand-accent/20">
+                            <svg class="w-6 h-6 text-brand-bg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="py-24 bg-brand-bg/50 border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-brand-card flex items-center justify-center mb-6 text-brand-accent border border-white/5">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3">Custom Snoozing</h3>
+                    <p class="text-brand-muted leading-relaxed">
+                        Life is unpredictable. Snooze reminders directly from your notifications for 15 minutes, an hour, or until you reach a specific location.
+                    </p>
+                </div>
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-brand-card flex items-center justify-center mb-6 text-brand-accent border border-white/5">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3">Advanced Recurring</h3>
+                    <p class="text-brand-muted leading-relaxed">
+                        Set reminders that repeat hourly, daily, or on complex intervals (e.g., "Every 3rd Tuesday"). Cue adapts to your routine.
+                    </p>
+                </div>
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-brand-card flex items-center justify-center mb-6 text-brand-accent border border-white/5">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3">True Sync</h3>
+                    <p class="text-brand-muted leading-relaxed">
+                        Dismiss a reminder on your phone, and it instantly clears from your tablet. No ghost notifications, just seamless continuity.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="py-24">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-medium mb-16">Simple by design</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8 relative">
+                <div class="hidden md:block absolute top-12 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+                <div class="relative z-10 bg-brand-bg px-4">
+                    <span class="text-4xl font-bold text-white/5 mb-4 block">01</span>
+                    <h4 class="text-lg font-medium text-white mb-2">Create</h4>
+                    <p class="text-sm text-brand-muted">Add a reminder with natural language or quick presets.</p>
+                </div>
+                <div class="relative z-10 bg-brand-bg px-4">
+                    <span class="text-4xl font-bold text-white/5 mb-4 block">02</span>
+                    <h4 class="text-lg font-medium text-white mb-2">Get Notified</h4>
+                    <p class="text-sm text-brand-muted">Receive a gentle nudge exactly when you need it.</p>
+                </div>
+                <div class="relative z-10 bg-brand-bg px-4">
+                    <span class="text-4xl font-bold text-white/5 mb-4 block">03</span>
+                    <h4 class="text-lg font-medium text-white mb-2">Complete</h4>
+                    <p class="text-sm text-brand-muted">Mark done or snooze. Changes sync everywhere instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="privacy" class="py-12 px-6">
+        <div class="max-w-4xl mx-auto bg-brand-card rounded-3xl p-8 md:p-12 border border-white/5">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-2/3">
+                    <h2 class="text-2xl font-medium mb-4 text-white">Your data stays yours.</h2>
+                    <p class="text-brand-muted mb-6">
+                        Cue is built on a foundation of privacy. We do not sell your personal data, we do not show ads, and we do not track your activity across other apps. Syncing is encrypted and used solely to keep your devices in harmony.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            No advertisements
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Encrypted sync
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            No data selling
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/3 flex justify-center">
+                    <svg class="w-24 h-24 text-brand-accent/20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-white/5 mt-12 py-12">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-sm text-brand-muted">
+                &copy; 2024 Cue App. All rights reserved.
+            </div>
+            <div class="flex gap-6 text-sm text-brand-muted">
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms of Use</a>
+                <a href="mailto:support@cueapp.com" class="hover:text-white transition-colors">Support</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
